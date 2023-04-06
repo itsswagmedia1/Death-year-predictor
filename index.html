@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Year Predictor</title>
+    
+    <style>
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      input[type="text"] {
+        font-size: 14px;
+      }
+      
+      button {
+        font-size: 14px;
+      }
+      
+      #result {
+        font-size: 20px;
+      }
+    }
+    
+    /* Desktop styles */
+    @media only screen and (min-width: 601px) {
+      body {
+        font-size: 16px;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      input[type="text"] {
+        font-size: 16px;
+      }
+      
+      button {
+        font-size: 16px;
+      }
+      
+      #result {
+        font-size: 28px;
+      }
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    p {
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #3e8e41;
+    }
+    
+    #result {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    
+    .footer-left p {
+      margin: 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  
+  <body>
+    <h1>Death Year Predictor ☠️</h1>
+    
+    <p>Please enter your name:</p>
+    <input type="text" id="name-input">
+    
+    <p>Click the button to see your death year:</p>
+    <button id="generate-button">Generate</button>
+    <p id="result"></p>
+    
+    <footer>
+      <div class="footer-left">
+        <p>&copy; 2023 Personality and intelligence predictor</p> 
+      </div>
+      
+    </footer>
+   <p>Contact: itsswagmedia@gmail.com </p>
+    
+    
+    <script>
+    
+    const generateButton = document.getElementById("generate-button");
+const result = document.getElementById("result");
+
+generateButton.addEventListener("click", function() {
+  const randomYear = Math.floor(Math.random() * (2099 - 2025 + 1)) + 2025;
+  result.innerHTML = randomYear;
+});
+
+    
+    </script>
+    
+
+</body>
+</html>
+    
+    
